@@ -25,15 +25,15 @@
                 <div class="col-3">   
                                   
                     <ul class="navbar">
-                        <li>Home</li>
-                        <li>Groom</li>
-                        <li>Bride</li>  
-                        <li class="logo">
-                            <img id="logo" src="./static/logo.svg" alt="">
-                        </li>                      
-                        <li>Weddings</li>
-                        <li>The Designer</li>
-                        <li>Contact Us</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#row4">Groom</a></li>
+                        <li><a href="#row3">Bride</a></li>  
+                        <a href="#"><li class="logo">                            
+                            <img id="logo" src="./static/logo.svg" alt="">                            
+                        </li></a>              
+                        <li><a href="#row6">Weddings</a></li>
+                        <li><a href="#row7">The Designer</a></li>
+                        <li><a href="#row9">Contact Us</a></li>
                         <img id="logo2" src="./static/logo.svg" alt="">
                         <div class="toggle_btn">
                             <i class="fa-solid fa-bars"></i>
@@ -43,12 +43,12 @@
 
                         <!-- dropdown menu -->
                 <div class="dropdown_menu">
-                    <li>Home</li>
-                    <li>Groom</li>
-                    <li>Bride</li>
-                    <li>Weddings</li>
-                    <li>The Designer</li>
-                    <li>Contact Us</li>
+                    <li><a href="#">Home</a></li>
+                        <li><a href="#row4">Groom</a></li>
+                        <li><a href="#row3">Bride</a></li>             
+                        <li><a href="#row6">Weddings</a></li>
+                        <li><a href="#row7">The Designer</a></li>
+                        <li><a href="#row9">Contact Us</a></li>
                 </div>
                   
 
@@ -78,7 +78,7 @@
 
                         
             <!-- 3rd row -->
-            <div class="row3">
+            <div class="row3" id="row3">
                 <img src="./static/row4.png" alt="">
                     <div class="row3text">
                     <h4>Wedding Gown</h4>
@@ -92,7 +92,7 @@
             </div>
 
             <!-- 4th row -->
-            <div class="row4">
+            <div class="row4" id="row4">
                 <img src="./static/row5.jpeg" alt="">
                 <div class="row4text">
                 <h4>Groom’s Attire</h4>
@@ -130,7 +130,7 @@
             </div>
 
             <!-- 6th row -->
-            <div class="row6">
+            <div class="row6" id="row6">
                 <div class="row6text">
                     <h4>Weddings</h4>
                     <p>These remarkable women embody the elegance and sophistication of our brand, their radiant smiles in our bridal gowns a testament to the magic of artistry meeting love, and we look forward to adorning more love stories in the future.
@@ -148,7 +148,7 @@
             </div>
 
             <!-- 7th row -->
-            <div class="row7">
+            <div class="row7" id="row7">
                 <img src="./static/medy.jpg" alt="">
                     <div class="row7text">
                         <h4 id="thedesigner">The Designer</h4>
@@ -217,7 +217,7 @@
 
 
             <!-- row9 contact us -->
-            <div class="row9">
+            <div class="row9" id="row9">
                     <div class="contactus">                     
                             <h4>Send us a message</h4>
                             <p>You can reach out for inquiries and appointment requests by using our contact form. Expect a prompt response from one of our customer relations officers.</p> 
@@ -238,7 +238,6 @@
                             <input type="email" id="email" name="email" placeholder="Email Address"><br>
                             <textarea id="w3review" name="w3review" rows="4" cols="100" placeholder="Message"></textarea>
                             </textarea>
-sss
                             <input type="submit" value="Send">
                           </form>
 
@@ -254,9 +253,20 @@ sss
                                 toggleBtnIcon.classList = isOpen
                                 ? 'fa-solid fa-xmark'
                                 : 'fa-solid fa-bars'
-
-
                             }
+
+// chatgpt
+                    // JavaScript code to add scroll event listener
+                           // JavaScript code to add scroll event listener
+                            window.addEventListener("scroll", function () {
+                                var navbar = document.querySelector(".navbar");
+                                
+                                if (window.scrollY > 0) {
+                                    navbar.classList.add("scrolled"); // Add the "scrolled" class when scrolled
+                                } else {
+                                    navbar.classList.remove("scrolled"); // Remove the "scrolled" class when not scrolled
+                                }
+                            });
 
                           </script>
                     </div>                 

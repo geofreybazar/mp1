@@ -14,7 +14,7 @@
 
 .navbar{
     display: flex;
-    position: absolute;  
+    position: fixed;  
     width: 100%;  
     height: 8rem;
     align-items: center;
@@ -25,19 +25,26 @@
     transform: translate(-50%);
     justify-content: center;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 98;
+    background-color: transparent; /* Initially transparent background */
+    transition: background-color 0.3s; /* Smooth transition effect for background */   
 }
 
 
 li{
     display: none;
-
 }
+/* chatgpt */
+.navbar.scrolled {
+    background-image: linear-gradient(to top, #302F1A, #302F1A); /* Change to white when scrolled */
+    height: 5rem;    
+}
+
+
 #logo2{
     display: block;
     width: 200px;
 }  
-
-
 
 .col-3 .hero-text{
     position: absolute;
@@ -399,10 +406,10 @@ input[type=submit] {
 
 /* dropdown */
 .dropdown_menu{
-    position: absolute;
+    position: fixed;
     right: 2rem;
-    top: 75px;
-    background-color: #f7f7f7;
+    top: 95px;
+    background-color: #302F1A;
     border-radius: 25px;
     overflow: hidden;
     z-index: 99;
@@ -410,10 +417,18 @@ input[type=submit] {
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: block;
     width: 15rem;
+    
+}
+
+.dropdown_menu li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family:'Libre Baskerville', serif;
+    color: #f7f7f7 ;
 }
 
 .dropdown_menu.open {
-    height: 240px;
+    height: 320px;
 }
 
 .dropdown_menu li{
@@ -431,8 +446,12 @@ input[type=submit] {
     padding: 2rem;
     right: 0;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
+.navbar.scrolled .toggle_btn i {
+    color: #fff; /* Change the toggle button color to black when scrolled */
+}
 
 /* tablet screens */
 @media screen and (min-width: 768px) {
@@ -653,13 +672,18 @@ input[type=submit] {
         justify-content: center;
     }
     
-    #logo{
+    .navbar a li img {
         width: 200%;
     }
-
+    
     .logo{
         padding: 5rem;
     }
+
+    .navbar.scrolled a li img {
+        width: 150%; /* Adjust the width as per your requirements */
+    }
+
     li{
         display: flex;
         justify-content: center;
@@ -671,6 +695,11 @@ input[type=submit] {
         font-family: 'Nunito Sans', sans-serif;
         text-align: center;
         font-size: 0.9rem;
+    }
+
+    li a{
+        text-decoration: none;
+        color: #fff;
     }
 
     #logo2{
@@ -759,7 +788,7 @@ input[type=submit] {
     .name1 img{
         padding: 0 0 1rem;
     }
-asd
+
     .message{
         height: 150px;
     }
