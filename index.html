@@ -6,7 +6,7 @@
     <title>GEO and Me Bridal Cotoure</title>
 
     <!-- humbergurber icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,8 @@
   </head>
   <body>
             <div class="row1">        
-                <div class="col-3">                 
+                <div class="col-3">   
+                                  
                     <ul class="navbar">
                         <li>Home</li>
                         <li>Groom</li>
@@ -34,7 +35,21 @@
                         <li>The Designer</li>
                         <li>Contact Us</li>
                         <img id="logo2" src="./static/logo.svg" alt="">
+                        <div class="toggle_btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                     </ul>
+
+
+                        <!-- dropdown menu -->
+                <div class="dropdown_menu">
+                    <li>Home</li>
+                    <li>Groom</li>
+                    <li>Bride</li>
+                    <li>Weddings</li>
+                    <li>The Designer</li>
+                    <li>Contact Us</li>
+                </div>
                   
 
 
@@ -226,6 +241,24 @@
 
                             <input type="submit" value="Send">
                           </form>
+
+                          <script>
+                            const toggleBtn = document.querySelector('.toggle_btn')
+                            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+                            toggleBtn.onclick = function () {
+                                dropDownMenu.classList.toggle('open')
+                                const isOpen = dropDownMenu.classList.contains('open')
+                                
+                                toggleBtnIcon.classList = isOpen
+                                ? 'fa-solid fa-xmark'
+                                : 'fa-solid fa-bars'
+
+
+                            }
+
+                          </script>
                     </div>                 
             </div>
 
