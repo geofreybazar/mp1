@@ -453,6 +453,31 @@ input[type=submit] {
     color: #fff; /* Change the toggle button color to black when scrolled */
 }
 
+footer{
+    background-color: #C3B8A5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family:'Nunito Sans', sans-serif; 
+    font-size: 1rem;
+    padding: 2rem;
+}
+
+footer img{
+    width: 60%;
+    padding-bottom: 1rem;
+}
+
+.footertext p{
+    padding-bottom: 1rem;
+}
+
+footer div p i{
+   padding-right: 0.5rem;
+}
+
 /* tablet screens */
 @media screen and (min-width: 768px) {
     .row1{
@@ -636,6 +661,11 @@ input[type=submit] {
     input[type=submit] {
         width: 100%;
     }
+
+    footer{
+        flex-direction: row;    
+    }
+ 
 }
 
 @media screen and (min-width: 1024px) {
@@ -800,6 +830,12 @@ input[type=submit] {
     .dropdown_menu{
         display: none;
     }
+
+    footer{
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+    
     
 }
 
